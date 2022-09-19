@@ -1,18 +1,24 @@
-# Напишите заготовку для небольшого магазинчика, который торгует фильмами и книгами.
-#
-# Создайте класс продукта, у экземпляров которого есть два поля: цена и количество на складе.
-# При создании нового продукта можно передать значения цены и остатка. Для этих переменных сделайте геттеры.
-#
-#   Унаследуйте от этого класса два других: книгу и фильм соответственно. Своих переменных у этих классов пока нет.
-#
-#   Создайте в основной программе какой-нибудь продукт, например «фильм Леон». Выведите его стоимость в консоль.
-#
-#   Фильм Леон стоит 290 руб.
-#   Создайте для этой программы локальный репозиторий. Мы к ней ещё вернёмся.
+# encoding: UTF-8
+if Gem.win_platform?
+  Encoding.default_external = Encoding.find(Encoding.locale_charmap)
+  Encoding.default_internal = __ENCODING__
+
+  [STDIN, STDOUT].each do |io|
+    io.set_encoding(Encoding.default_external, Encoding.default_internal)
+  end
+end
+
+#Подключаем классы
 require_relative 'lib/product'
 require_relative 'lib/film'
 require_relative 'lib/book'
 
-film1 = Film.new(price: 290, count: 5)
+products = []
+products << Film.new(price: 290, count: 5, name: "Леон", year: 1994, author:"Люк Бессон")
+products << Film.new(price: 390, count: 1, name: "Дурак", year: 2014, author:"Юрий Быков")
+products << Book.new(price: 1500, count: 10, name: "Идиот", genre: "роман", author:"Федор Достоевский")
+products << Product.new(price: 777, count: 99)
 
-puts "Фильм Леон стоит #{film1.price} руб."
+products.each do |product|
+puts product
+end
