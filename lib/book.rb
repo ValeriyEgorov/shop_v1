@@ -37,7 +37,7 @@ class Book < Product
       return
     end
 
-    self.new(name: f[0], genre: f[1],author: f[2], price: f[3], count: f[4])
+    self.new(name: f[0], genre: f[1],author: f[2], price: f[3].to_i, count: f[4].to_i)
 
   end
 end
