@@ -24,4 +24,15 @@ class Product
     raise NotImplementedError
   end
 
+  def buy
+    if @count > 0
+      puts "Вы купили товар!"
+      @count -= 1
+      return @price
+    else
+      puts "К сожалению больше нет!"
+      return 0
+    end
+  end
+
 end

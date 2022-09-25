@@ -11,8 +11,10 @@ class ProductCollection
     @products = products
   end
 
-  def to_a
-    @products
+  def info
+    @products.to_a.each_with_index do |item, index|
+      puts "#{index}. #{item}"
+    end
   end
 
   def self.from_dir(dir_path)
@@ -91,7 +93,7 @@ class ProductCollection
 
     #Создадим экземпляр класса ProductCollection.
     # Вызовем конструктов класса ProductCollection
-    self.new(products)
+    return products
 
   end
 end
