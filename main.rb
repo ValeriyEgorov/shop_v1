@@ -62,3 +62,10 @@ collection.sort!(by: :price, order: :asc)
 collection.to_a.each do |item|
   puts item
 end
+
+puts "ХМЛ магазин:"
+xml_collection = ProductCollection.read_from_xml(current_path + "./data/production.xml")
+
+xml_collection.to_a.each do |item|
+  puts item
+end

@@ -6,7 +6,7 @@ class Book < Product
     super
     @name = params[:name]
     @genre = params[:genre]
-    @author= params[:author]
+    @author = params[:author]
   end
 
 #Добавим геттеры класса
