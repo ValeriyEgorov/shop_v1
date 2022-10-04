@@ -1,18 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?> 
 <products>
-  <product price="1000" amount_available="5">
-    <book title="Приключения Тома Сойера" author_name="Марк Твен"genre="роман"></book>
+  <product price='1000' amount_available='5'>
+    <book title='Приключения Тома Сойера' author_name='Марк Твен' genre='роман'/>
   </product>
-  <product price="1500" amount_available="3">
-    <book title="Идиот" author_name="Федор Достоевский" genre="роман"></book>
+  <product price='1500' amount_available='3'>
+    <book title='Идиот' author_name='Федор Достоевский' genre='роман'/>
   </product>
-  <product price="3000" amount_available="7">
-    <book title="Бойцовский клуб" author_name="Чак Паланик"genre="триллер"></book>
+  <product price='3000' amount_available='7'>
+    <book title='Бойцовский клуб' author_name='Чак Паланик' genre='триллер'/>
   </product>
-  <product price="990" amount_available="15">
-    <film title="Леон" author_name="Люк Бессон"year="1994"></film>
+  <product price='990' amount_available='15'>
+    <film title='Леон' author_name='Люк Бессон' year='1994'/>
   </product>
-  <product price="1990" amount_available="11">
-    <film title="Фильм" author_name="Тестов"year="2022"></film>
+  <product price='1990' amount_available='11'>
+    <film title='Фильм' author_name='Тестов' year='2022'/>
+  </product>
+  <product price='5000' amount_available='7'>
+    <book title='Изучение руби' author_name='Валерий' genre='образование'/>
   </product>
 </products>

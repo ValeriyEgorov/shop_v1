@@ -40,4 +40,34 @@ class Book < Product
     self.new(name: f[0], genre: f[1],author: f[2], price: f[3].to_i, count: f[4].to_i)
 
   end
+
+  def self.read_from_console
+
+    super
+
+    puts "Укажите название книги"
+    @name = STDIN.gets.chomp
+
+    puts "Укажите автора книги"
+    @author = STDIN.gets.chomp
+
+    puts "Укажите жанр книги"
+    @genre = STDIN.gets.chomp
+
+    return self.new(count: @count, price: @price, name: @name, author: @author, genre: @genre)
+  end
+
+
+  def to_xml
+
+    element = super
+
+    book = element.add_element("book")
+    book.attributes["title"] = @name
+    book.attributes["author_name"] = @author
+    book.attributes["genre"] = @genre
+
+    return element
+  end
+
 end
